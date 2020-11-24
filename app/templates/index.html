@@ -3,131 +3,110 @@
 
 
 {% block content %}
-<div class="container-fluid" style="color: black; background-color: blue; background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%">
-   <div class="row">
-        <div class="panel panel-default">
-            <div class="panel-body">
-       
-        
-          <div class="row">
-             <h2>General News</h2>
-                {% for general in new_general %}
-                <div class="col-md-4">
-                  <div class="panel panel-default">
-                     <div class="panel-body">
-                  <div class="thumbnail">
-                    <h2> {{ general.name}}</h2>
-                    <p>{{general.description | truncate(80)}}</p>
-                    <p>{{general.language}}</p>
-                    <p><a href="/articles/{{general.id}}">Read Articles</a></p>             
-                </div>
-            </div>      
-          </div>
-                </div>
-                </div>
-                {% endfor %}
+<div class="container-fluid">
+   
+  <div class="row">
+    <h2 style="text-align: center">General News</h2>
+          {% for general in new_general %}
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <h2> {{ general.name}}</h2>
+          <p>{{general.description | truncate(80)}}</p>
+          <p>{{general.language}}</p>
+          <p><a href="/articles/{{general.id}}">Read Articles</a></p>             
+        </div>
+      </div>
+  </div>
+          {% endfor %}
            
-           
-       
-          <div class="row">
-              <h2>Business</h2>
-                 {% for business in new_business %}
-                   <div class="col-md-4">
-                     <div class="thumbnail">
-                       <h2> {{ business.name}}</h2>
-                       <p>{{business.description | truncate(80)}}</p>
-                       <p>{{business.language}}</p>
-                       <p><a href="/articles/{{business.id}}">Read Articles</a></p>             
-                     </div>
-                  </div>
-          </div>
-         
-            {% endfor %}
-       
-       
-        
-         
-        
-             <div class="row">
-                 <h2>entertainment</h2>
-                     {% for entertainment in new_entertainment %}
-                     <div class="col-md-4">
-                        <div class="thumbnail">
-                           <h2> {{ entertainment.name}}</h2>
-                              <p>{{entertainment.description | truncate(80)}}</p>
-                              <p>{{entertainment.language}}</p>
-                              <p><a href="/articles/{{entertainment.id}}">Read Articles</a></p>             
-                      </div> 
-                    </div>     
-             </div>
-            {% endfor %}
-        
-       
-        
-          <div class="row">
-                <h2>sports</h2>
-                   {% for sports in new_sports %}
-                      <div class="col-md-4">
-                         <div class="thumbnail">
-                           <h2> {{ sports.name}}</h2>
-                           <p>{{sports.description | truncate(80)}}</p>
-                           <p>{{sports.language}}</p>
-                           <p><a href="/articles/{{new_sports.id}}">Read Articles</a></p>             
-                        </div>
-                      </div>
-          </div>
-            {% endfor %}
-        
-       
-        
-          <div class="row">
-             <h2>Technology</h2>
-                   {% for technology in new_tech %}
-                      <div class="col-md-4">
-                        <div class="thumbnail">
-                           <h2> {{ technology.name}}</h2>
-                           <p>{{technology.description | truncate(80)}}</p>
-                           <p>{{technology.language}}</p>
-                           <p><a href="/articles/{{technology.id}}">Read Articles</a></p>             
-                        </div>
-                      </div>
-          </div>
-            {% endfor %}
-        
-       
-       
-         <div class="row"> 
-                <h2>Science</h2>
-                     {% for science in new_science %}
-                       <div class="col-md-4">
-                            <div class="thumbnail">
-                              <h2> {{ science.name}}</h2>
-                              <p>{{science.description | truncate(80)}}</p>
-                              <p>{{science.language}}</p>
-                              <p><a href="/articles/{{science.id}}">Read Articles</a></p>             
-                           </div>
-                       </div>
-         </div>
-            {% endfor %}
-        
-       
-        
-             <div class="row">
-                  <h2>Health</h2>
-                        {% for health in new_health %}
-                             <div class="col-md-4">
-                                <div class="thumbnail">
-                                   <h2> {{ health.name}}</h2>
-                                   <p>{{health.description | truncate(80)}}</p>
-                                   <p>{{health.language}}</p>
-                                   <p><a href="/articles/{{health.id}}">Read Articles</a></p>             
-                               </div>
-                             </div>
-             </div>
-            {% endfor %}
-        
+  <div class="row">
+    <br>
+    <h2 style="text-align: center">Business News</h2>
+          {% for business in new_business %}
+    <div class="col-md-4">
+        <div class="thumbnail">
+          <h2> {{ business.name}}</h2>
+          <p>{{business.description | truncate(80)}}</p>
+          <p>{{business.language}}</p>
+          <p><a href="/articles/{{business.id}}">Read Articles</a></p>             
+        </div>
     </div>
   </div>
-</div>
+         
+          {% endfor %}
+       
+
+  <div class="row">
+    <h2 style="text-align: center">Entertainment News</h2>
+          {% for entertainment in new_entertainment %}
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <h2> {{ entertainment.name}}</h2>
+          <p>{{entertainment.description | truncate(80)}}</p>
+          <p>{{entertainment.language}}</p>
+          <p><a href="/articles/{{entertainment.id}}">Read Articles</a></p>             
+        </div> 
+      </div>     
+  </div>
+          {% endfor %}
+        
+
+  <div class="row">
+    <h2 style="text-align: center">sports News</h2>
+          {% for sports in new_sports %}
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <h2> {{ sports.name}}</h2>
+          <p>{{sports.description | truncate(80)}}</p>
+          <p>{{sports.language}}</p>
+          <p><a href="/articles/{{new_sports.id}}">Read Articles</a></p>             
+        </div>
+      </div>
+  </div>
+           {% endfor %}
+        
+       
+  <div class="row">
+    <h2 style="text-align: center">Technology</h2>
+            {% for technology in new_tech %}
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <h2> {{ technology.name}}</h2>
+        <p>{{technology.description | truncate(80)}}</p>
+        <p>{{technology.language}}</p>
+        <p><a href="/articles/{{technology.id}}">Read Articles</a></p>             
+      </div>
+    </div>
+  </div>
+            {% endfor %}
+        
+       
+  <div class="row"> 
+    <h2 style="text-align: center">Science</h2>
+            {% for science in new_science %}
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <h2> {{ science.name}}</h2>
+          <p>{{science.description | truncate(80)}}</p>
+          <p>{{science.language}}</p>
+          <p><a href="/articles/{{science.id}}">Read Articles</a></p>             
+        </div>
+      </div>
+  </div>
+            {% endfor %}
+        
+  <div class="row">
+    <h2 style="text-align: center">Health</h2>
+            {% for health in new_health %}
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <h2> {{ health.name}}</h2>
+        <p>{{health.description | truncate(80)}}</p>
+        <p>{{health.language}}</p>
+        <p><a href="/articles/{{health.id}}">Read Articles</a></p>             
+      </div>
+    </div>
+  </div>
+            {% endfor %}
 </div>
  {% endblock%}
