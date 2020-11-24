@@ -18,7 +18,7 @@ This is an application which will help people accessing different news resources
 - Bootstrap
 
 # Link to Heroku
-
+https://mapeacenews.herokuapp.com/
 
 # License
 Licensed under MIT License
