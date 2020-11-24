@@ -72,3 +72,23 @@ def get_articles(id):
         
     return articles_results
 
+def process_articles(articles_list):
+    '''
+    Function that processes the json results for the articles
+    '''
+    articles_results = []
+    
+    for article_item in articles_list:
+         id = article_item.get('id')
+
+         author = article_item.get('author')
+         title = article_item.get('title')
+         description = article_item.get('description')
+         url = article_item.get('url')
+         urlToImage = article_item.get('urlToImage')
+         publishedAt = article_item.get('publishedAt')
+         content = article_item.get('content')
+         if urlToImage:
+            articles_result = Articles(id,author,title,description,url,urlToImage,publishedAt,content)
+            articles_results.append(articles_result)
+    return articles_results
